@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Thiago Sombrio | Consultoria Online de Elite</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#4a4949",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed": "#2c1513",
+                        "tier-diamond": "#E0F7FA",
+                        "outline-variant": "#3c4b35",
+                        "on-primary-fixed-variant": "#095300",
+                        "outline": "#85967c",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#7a5955",
+                        "surface-variant": "#353535",
+                        "primary-fixed": "#79ff5b",
+                        "tertiary": "#fff8f7",
+                        "primary-container": "#39ff14",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-error": "#690005",
+                        "on-secondary": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed-dim": "#e7bdb8",
+                        "surface": "#131313",
+                        "on-primary-container": "#107100",
+                        "on-primary": "#053900",
+                        "on-surface-variant": "#baccb0",
+                        "secondary-fixed": "#e5e2e1",
+                        "inverse-primary": "#106e00",
+                        "primary": "#efffe3",
+                        "on-tertiary": "#442927",
+                        "surface-container": "#20201f",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#ffd3ce",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#5d3f3c",
+                        "on-primary-fixed": "#022100",
+                        "surface-glass": "rgba(255, 255, 255, 0.05)",
+                        "surface-container-high": "#2a2a2a",
+                        "text-dim": "#A0A0A0",
+                        "secondary": "#c9c6c5",
+                        "surface-tint": "#2ae500",
+                        "surface-dim": "#131313",
+                        "on-secondary-container": "#bab8b7",
+                        "text-high-contrast": "#FFFFFF",
+                        "primary-fixed-dim": "#2ae500",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#ffdad6",
+                        "tier-silver": "#C0C0C0",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "tier-gold": "#D4AF37",
+                        "on-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Archivo Narrow"],
+                        "display-xl": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+    <!-- Top Navigation -->
+    
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-12 md:pt-0 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Gym Background" class="w-full h-full object-cover opacity-40" src="src/fundoacademia.png">
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+            <!-- Tech-style graphic elements -->
+            <div class="absolute top-1/4 right-1/4 w-48 md:w-64 h-48 md:h-64 border border-primary-container/20 rounded-full opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/3 w-64 md:w-96 h-64 md:h-96 border-t border-l border-primary-container/10 rounded-tl-full opacity-30"></div>
+            <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(57,255,20,0.05)_0%,transparent_50%)]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center auto-rows-max">
+            <div class="flex flex-col gap-6 py-8 md:py-16">
+                <span class="inline-block px-4 py-1 bg-primary-container/10 border border-primary-container/30 text-primary-container font-label-sm text-label-sm uppercase tracking-widest w-fit">Consultoria de Elite</span>
+                <h1 class="font-headline-lg-mobile md:font-display-xl text-headline-lg-mobile md:text-display-xl text-high-contrast uppercase leading-tight md:leading-none">
+                    Treine com quem entende de <span class="text-primary-container text-glow">Resultados</span>
+                </h1>
+                <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-text-dim max-w-lg">
+                    Consultoria Online Individualizada: O seu melhor físico começa com a estrutura certa. Pare de tentar a sorte e comece a treinar com método.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">
+                    <a class="bg-primary-container text-on-primary text-center px-8 md:px-10 py-4 md:py-5 font-headline-md text-headline-md font-bold uppercase intensity-glow hover:brightness-110 transition-all" href="#planos">COMEÇAR AGORA</a>
+                    <a class="border border-primary-container text-primary-container text-center px-8 md:px-10 py-4 md:py-5 font-headline-md text-headline-md font-bold uppercase hover:bg-primary-container/10 transition-all" href="#video">Ver Metodologia</a>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center items-center">
+                <div class="relative w-full max-w-sm md:max-w-lg lg:max-w-2xl">
+                    <!-- Glowing accent behind Thiago -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[80%] bg-primary-container/10 blur-[100px] rounded-full"></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-[10%] border-b-2 border-x-2 border-primary-container/40 rounded-b-xl opacity-50 z-0"></div>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[105%] h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent intensity-glow z-0"></div>
+                    <img alt="Thiago Sombrio" class="relative z-10 w-full h-auto object-contain mx-auto" src="src/thiagosombriofotos/1759410914357.png">
+                </div>
+            </div>
+            </div>
+    </header>
+    
+    <!-- Intro Video Section -->
+    <section class="py-12 md:py-section-gap bg-surface-container-lowest" id="video">
+        <div class="max-w-container-max mx-auto px-gutter text-center mb-10 md:mb-16">
+            <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast mb-4 md:mb-6 uppercase">Por que você treina errado?</h2>
+            <div class="w-16 md:w-24 h-1 bg-primary-container mx-auto"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-gutter">
+            <div class="glass-card aspect-video relative group overflow-hidden cursor-pointer">
+                <div class="absolute inset-0 flex items-center justify-center z-10">
+                    <div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center intensity-glow group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
+                <div class="p-8 h-full flex flex-col justify-end relative z-10">
+                    <p class="font-body-lg text-body-lg italic text-white/80">"A maioria esmagadora das pessoas se frustra na academia porque está, literalmente, dando um tiro no escuro esperando acertar o alvo."</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-text-dim max-w-2xl mx-auto">
+                <p class="font-body-lg text-body-lg">
+                    Em quase 10 anos de consultoria online e após treinar mais de 5.000 pessoas, analisei uma quantidade incalculável de protocolos. Todos os alunos que chegaram até mim tinham uma coisa em comum: todos treinavam errado.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Methodology Bento Grid -->
+    <section class="py-12 md:py-section-gap relative" id="metodologia">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="mb-10 md:mb-16">
+                <span class="text-primary-container font-label-sm text-label-sm uppercase tracking-tighter">O Método</span>
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast uppercase mt-2">Personalização Milimétrica</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Biobiotipo -->
+                <div class="glass-card p-10 flex flex-col gap-6 hover:border-primary-container/40 transition-all group">
+                    <span class="material-symbols-outlined text-5xl text-primary-container" style="font-variation-settings: 'FILL' 0;">fingerprint</span>
+                    <h3 class="font-headline-md text-headline-md text-high-contrast uppercase">Biobiotipo</h3>
+                    <p class="font-body-md text-body-md text-text-dim">Análise completa da sua estrutura genética, metabolismo e limitações físicas para um estímulo preciso.</p>
+                </div>
+                <!-- Rotina -->
+                <div class="glass-card p-10 flex flex-col gap-6 hover:border-primary-container/40 transition-all group">
+                    <span class="material-symbols-outlined text-5xl text-primary-container">schedule</span>
+                    <h3 class="font-headline-md text-headline-md text-high-contrast uppercase">Rotina</h3>
+                    <p class="font-body-md text-body-md text-text-dim">O treino que se adapta à sua vida, não o contrário. Horários, equipamentos disponíveis e frequência real.</p>
+                </div>
+                <!-- Objetivos -->
+                <div class="glass-card p-10 flex flex-col gap-6 hover:border-primary-container/40 transition-all group">
+                    <span class="material-symbols-outlined text-5xl text-primary-container" style="font-variation-settings: 'FILL' 1;">target</span>
+                    <h3 class="font-headline-md text-headline-md text-high-contrast uppercase">Objetivos</h3>
+                    <p class="font-body-md text-body-md text-text-dim">Foco total no seu alvo, seja hipertrofia máxima, definição extrema ou performance atlética.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof / Results -->
+    <section class="py-12 md:py-section-gap bg-surface-container-low" id="resultados">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast uppercase">Resultados Reais</h2>
+                <p class="text-primary-container font-label-sm text-label-sm mt-2 uppercase tracking-widest">A prova está no corpo dos alunos</p>
+                <div class="flex justify-center gap-3 md:gap-4 mt-6 md:mt-8">
+                    <button class="w-10 md:w-12 h-10 md:h-12 rounded-full border border-primary-container text-primary-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined text-sm md:text-base">chevron_left</span>
+                    </button>
+                    <button class="w-10 md:w-12 h-10 md:h-12 rounded-full border border-primary-container text-primary-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined text-sm md:text-base">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="relative group">
+                    <div class="overflow-hidden glass-card">
+                        <img alt="Resultado Cliente 1" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 transform hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLukybB4g26Pk5EZoTcBUkzffgMjBm44eDJJxVz4Rj-XF6JnmOaq-vhLukGUlp_T6H8esmYm3BKLjl154G_D_QweJjOGBx-ljppzKOQ1vfMTnMGiCVo_tllv1jWj6jEkT4Pi8K-yKB12AbAaibwWQOCNbp7CfuInPXHJ-xuGYifeDjJCUojhe04Jr4Ym_bB3KfIQSoyTfOgNaaVcxIn6MrtQBaPskF-wDoouKwAVjwNy8GRzCOp5ZFW8pxIP">
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-primary-container text-on-primary px-4 py-2 font-bold text-sm uppercase">12 Semanas</div>
+                </div>
+                <div class="relative group">
+                    <div class="overflow-hidden glass-card">
+                        <img alt="Resultado Cliente 2" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 transform hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvvR9thU0mZV3uVhCwWR7uECK0YMpMqD8qJu9RNLBnr6BKlraqs07OXqacg2w6NjT_uQoNgZCZbSASFWekb0fFmITdVvtNEzpBPpjvjp2Ln1l_7OIWq93dP0jrnAcD2q2uTK_Iyx9eIwvZQPrnoo6k-5zMkF0bgukF1FiLiHC1ouPzGnri79B37aevnGs80UJVWwIcaqCIVdhVn9vd3oNMDmR-nyLq-ssxQ-jkEMFAgedD48jhS37xdHzYu">
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-primary-container text-on-primary px-4 py-2 font-bold text-sm uppercase">8 Semanas</div>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-20 text-center flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#" class="border border-primary-container text-primary-container px-8 md:px-12 py-4 md:py-5 font-headline-md text-headline-md font-bold uppercase hover:bg-primary-container/10 transition-all inline-block">VER MAIS RESULTADOS</a>
+                <a class="bg-primary-container text-on-primary px-8 md:px-12 py-4 md:py-5 font-headline-md text-headline-md font-bold uppercase intensity-glow inline-block" href="#planos">Quero ter esse resultado</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Thiago -->
+    <section class="py-12 md:py-section-gap relative overflow-hidden">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start md:items-center">
+            <div class="relative">
+                <div class="aspect-[3/4] bg-surface-container overflow-hidden border border-white/10">
+                    <div class="w-full h-full bg-gradient-to-t from-background via-transparent to-transparent absolute inset-0 z-10"></div>
+                    <img class="w-full h-full object-cover opacity-80" alt="Thiago Sombrio - O Professor dos Treinadores" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiYUwJ64QV_xxnJEOE38e8S973Jj295TbJkj-xNBYIFWi1jCvmXtjDip7Zio5UGHKRwdCeqD024qGud-PFT0V0K4jclR9RB6jcyRFnQJuqVFZxrMQM-A3WzDcfUqB56DaqqSyW_7uyKb6KG_6-6igx9llgTTqa7F3Gin0pVk3ARruf1zzer_mH38LEGfu3SvL1vqdz0gRs3uhcWXmFTwGbFQ0NGUvyrHAtqQHDctaI44qwpza7sWqwaBhL0DXQpiTnwZ4L1Y2GNvN8">
+                </div>
+                <div class="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 glass-card p-6 md:p-8 intensity-glow z-20">
+                    <div class="text-primary-container font-headline-lg md:font-display-xl text-3xl md:text-5xl font-bold">+5.000</div>
+                    <div class="text-white font-label-sm text-label-sm uppercase">Vidas Transformadas</div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 md:gap-8">
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast leading-tight uppercase">
+                    O Professor dos Treinadores:<br>
+                    <span class="text-primary-container">Thiago Sombrio</span>
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <p class="font-body-md text-body-md text-text-dim">Pós-graduado em Biomecânica e Ciências da Reabilitação.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <p class="font-body-md text-body-md text-text-dim">Perito em Avaliação Postural e Prescrição de Hipertrofia.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <p class="font-body-md text-body-md text-text-dim">Mais de 40 mil professionals capacitados através de suas formações.</p>
+                    </div>
+                </div>
+                <p class="font-body-lg text-body-lg text-text-dim">
+                    "Cada série, cada repetição, cada descanso é desenhado sob medida — como um alfaiate que tira suas medidas antes de cortar o primeiro pedaço de tecido."
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Tiers -->
+    <section class="py-12 md:py-section-gap" id="planos">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast uppercase">Planos Disponíveis</h2>
+                <p class="text-primary-container font-label-sm text-label-sm mt-2 uppercase tracking-widest">Invista no seu maior ativo: Seu corpo</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:auto-rows-max">
+                <!-- Silver -->
+                <div class="glass-card p-10 flex flex-col border-t-4 border-tier-silver/50">
+                    <span class="text-tier-silver font-label-sm text-label-sm uppercase font-bold mb-4">Plano Prata</span>
+                    <div class="mb-8">
+                        <div class="text-text-dim line-through text-sm">R$ 897,00</div>
+                        <div class="text-4xl font-bold text-high-contrast">R$ 727,00</div>
+                        <div class="text-text-dim text-xs uppercase mt-2">À vista ou em até 12x</div>
+                    </div>
+                    <ul class="flex-grow space-y-4 mb-10">
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 3 meses de acompanhamento</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 2 protocolos de treino</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Suporte diário via WhatsApp</li>
+                    </ul>
+                    <a class="w-full text-center border border-tier-silver text-tier-silver py-4 font-bold uppercase hover:bg-tier-silver hover:text-black transition-all" href="#">Selecionar Prata</a>
+                </div>
+                <!-- Gold (Featured) -->
+                <div class="glass-card p-10 flex flex-col border-t-4 border-tier-gold intensity-glow md:scale-105 relative z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-tier-gold text-black px-4 py-1 text-[10px] font-bold uppercase tracking-widest">Mais Vendido</div>
+                    <span class="text-tier-gold font-label-sm text-label-sm uppercase font-bold mb-4">Plano Ouro</span>
+                    <div class="mb-8">
+                        <div class="text-text-dim line-through text-sm">R$ 1.600,00</div>
+                        <div class="text-4xl font-bold text-high-contrast">R$ 1.327,00</div>
+                        <div class="text-text-dim text-xs uppercase mt-2">À vista ou em até 12x</div>
+                    </div>
+                    <ul class="flex-grow space-y-4 mb-10">
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 6 meses de acompanhamento</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 4 protocolos de treino</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Acesso 180 dias à plataforma</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Suporte diário prioritário</li>
+                    </ul>
+                    <a class="w-full text-center bg-primary-container text-on-primary py-4 font-bold uppercase intensity-glow hover:scale-105 transition-transform" href="#">Selecionar Ouro</a>
+                </div>
+                <!-- Diamond -->
+                <div class="glass-card p-10 flex flex-col border-t-4 border-tier-diamond/50">
+                    <span class="text-tier-diamond font-label-sm text-label-sm uppercase font-bold mb-4">Plano Diamante</span>
+                    <div class="mb-8">
+                        <div class="text-text-dim line-through text-sm">R$ 2.700,00</div>
+                        <div class="text-4xl font-bold text-high-contrast">R$ 2.127,00</div>
+                        <div class="text-text-dim text-xs uppercase mt-2">À vista ou em até 12x</div>
+                    </div>
+                    <ul class="flex-grow space-y-4 mb-10">
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 12 meses de acompanhamento</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 8 protocolos de treino</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Suporte Individual Total</li>
+                        <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Avaliação postural mensal</li>
+                    </ul>
+                    <a class="w-full text-center border border-tier-diamond text-tier-diamond py-4 font-bold uppercase hover:bg-tier-diamond hover:text-black transition-all" href="#">Selecionar Diamante</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contato" class="py-12 md:py-section-gap bg-surface relative overflow-hidden border-t border-white/5">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast uppercase">Contato</h2>
+                <div class="w-16 md:w-24 h-1 bg-primary-container mx-auto mt-4"></div>
+                <p class="text-text-dim font-body-md md:font-body-lg mt-4 md:mt-6 max-w-2xl mx-auto">Ficou com alguma dúvida? Entre em contato diretamente comigo ou através das redes sociais.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+                <!-- Contact Form -->
+                <div class="glass-card p-8 md:p-10">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">Nome Completo</label>
+                            <input type="text" placeholder="Seu nome" class="w-full bg-black/40 border border-white/10 rounded-none px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">E-mail</label>
+                            <input type="email" placeholder="seu@email.com" class="w-full bg-black/40 border border-white/10 rounded-none px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">WhatsApp</label>
+                            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-black/40 border border-white/10 rounded-none px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">Mensagem</label>
+                            <textarea rows="4" placeholder="Como posso te ajudar?" class="w-full bg-black/40 border border-white/10 rounded-none px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase intensity-glow hover:scale-105 transition-transform">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <!-- Social & Direct Contact -->
+                <div class="flex flex-col gap-10">
+                    <div class="space-y-6">
+                        <h3 class="font-headline-md text-headline-md text-high-contrast uppercase">Canais Diretos</h3>
+                        <div class="flex flex-col gap-6">
+                            <a href="#" class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full border border-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/10 transition-all">
+                                    <span class="material-symbols-outlined text-primary-container">mail</span>
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold uppercase text-sm">E-mail</div>
+                                    <div class="text-text-dim">contato@thiagosombrio.com.br</div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full border border-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/10 transition-all">
+                                    <span class="material-symbols-outlined text-primary-container">share</span>
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold uppercase text-sm">Instagram</div>
+                                    <div class="text-text-dim">@sombrio.personal</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 border border-primary-container/20 bg-primary-container/5">
+                        <h4 class="font-headline-md text-headline-md text-high-contrast uppercase mb-4">Atendimento Imediato</h4>
+                        <p class="text-text-dim mb-8">Prefere falar agora? Clique no botão abaixo para iniciar uma conversa no WhatsApp.</p>
+                        <a href="#" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold uppercase hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined">chat</span>
+                            Chamar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-12 md:py-20 border-t border-white/5">
+        <div class="max-w-container-max mx-auto px-gutter flex flex-col gap-8 md:gap-0 md:flex-row md:justify-between md:items-center">
+            <div class="flex flex-col gap-4 text-center md:text-left">
+                <div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary-container">THIAGO SOMBRIO</div>
+                <p class="text-text-dim font-label-sm text-label-sm uppercase">© 2024 Thiago Sombrio Personal Trainer. Todos os direitos reservados.</p>
+            </div>
+            <div class="flex flex-wrap gap-6 md:gap-8 justify-center">
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Consultoria</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Metodologia</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Resultados</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Instagram</a>
+            </div>
+            <div class="flex gap-4 items-center justify-center md:justify-start">
+                <span class="text-text-dim font-body-md">@sombrio.personal</span>
+                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+:root {
+    --electric-green: #39ff14;
+}
+
+body {
+    background-color: #131313;
+    color: #e5e2e1;
+    overflow-x: hidden;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.125rem;
+}
+
+.intensity-glow {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.text-glow {
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.section-divider {
+    height: 60px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Responsividade mobile-first */
+@media (max-width: 768px) {
+    .section-gap {
+        margin-bottom: 60px;
+    }
+    
+    h1, h2, h3 {
+        word-spacing: -0.05em;
+    }
+}
+
+@media (min-width: 769px) {
+    .section-gap {
+        margin-bottom: 120px;
+    }
+}
+
+/* Melhorar alinhamento de elementos interativos */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Grid responsivo aprimorado */
+.auto-rows-max {
+    grid-auto-rows: max-content;
+}
