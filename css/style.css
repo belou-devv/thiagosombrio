@@ -81,3 +81,18 @@ a {
 .auto-rows-max {
     grid-auto-rows: max-content;
 }
+
+/* Hero Section Mobile - Inverte ordem e reduz espaçamento */
+@media (max-width: 768px) {
+    #hero .grid {
+        gap: 3px !important;
+    }
+    
+    #hero .grid > div:first-child {
+        order: 2;
+    }
+    
+    #hero .grid > div:last-child {
+        order: 1;
+    }
+}
