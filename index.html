@@ -409,24 +409,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
                 <!-- Contact Form -->
                 <div class="glass-card p-8 md:p-10">
-                    <form class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
                         <div>
                             <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">Nome Completo</label>
-                            <input type="text" placeholder="Seu nome" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                            <input type="text" id="contactName" placeholder="Seu nome" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors" required>
                         </div>
                         <div>
                             <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">E-mail</label>
-                            <input type="email" placeholder="seu@email.com" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                            <input type="email" id="contactEmail" placeholder="seu@email.com" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors" required>
                         </div>
                         <div>
                             <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">WhatsApp</label>
-                            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors">
+                            <input type="tel" id="contactPhone" placeholder="(00) 00000-0000" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors" required>
                         </div>
                         <div>
                             <label class="block font-label-sm text-label-sm text-primary-container uppercase mb-2">Mensagem</label>
-                            <textarea rows="4" placeholder="Como posso te ajudar?" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors"></textarea>
+                            <textarea id="contactMessage" rows="4" placeholder="Como posso te ajudar?" class="w-full bg-black/40 border border-white/10 rounded-2xl px-4 py-3 text-on-surface focus:border-primary-container focus:ring-0 transition-colors" required></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase intensity-glow hover:scale-105 transition-transform rounded-2xl">Enviar Mensagem</button>
+                        <button type="button" onclick="sendToWhatsApp()" class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase intensity-glow hover:scale-105 transition-transform rounded-2xl">Enviar Mensagem</button>
                     </form>
                 </div>
                 
@@ -462,17 +462,19 @@
                                     <div class="text-text-dim">@sombrio.personal</div>
                                 </div>
                             </a>
+                            <a href="https://forms.gle/tnzQzedA3Kng4t566" target="_blank" class="flex items-center gap-4 group p-4 rounded-2xl border-2 border-primary-container bg-primary-container/15 hover:bg-primary-container/25 transition-all">
+                                <div class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center group-hover:bg-primary-container/50 transition-all">
+                                    <span class="material-symbols-outlined text-primary-container text-lg">description</span>
+                                </div>
+                                <div>
+                                    <div class="text-primary-container font-bold uppercase text-sm">Formulário de Consultoria</div>
+                                    <div class="text-text-dim text-xs">Clique e comece sua jornada</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="p-8 border border-primary-container/20 bg-primary-container/5">
-                        <h4 class="font-headline-md text-headline-md text-high-contrast uppercase mb-4">Atendimento Imediato</h4>
-                        <p class="text-text-dim mb-8">Prefere falar agora? Clique no botão abaixo para iniciar uma conversa no WhatsApp.</p>
-                        <a href="https://wa.me/5545991497898" target="_blank" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold uppercase hover:scale-105 transition-transform rounded-2xl">
-                            <span class="material-symbols-outlined">chat</span>
-                            Chamar no WhatsApp
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -501,9 +503,39 @@
                 <a href="https://instagram.com/sombrio.personal" target="_blank" title="Instagram" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
                     <span class="material-symbols-outlined text-sm">share</span>
                 </a>
+                <a href="https://forms.gle/tnzQzedA3Kng4t566" target="_blank" title="Formulário" class="w-12 h-12 rounded-full border-2 border-primary-container bg-primary-container/20 flex items-center justify-center hover:bg-primary-container/40 transition-all cursor-pointer intensity-glow">
+                    <span class="material-symbols-outlined text-sm text-primary-container font-bold">description</span>
+                </a>
             </div>
         </div>
     </footer>
+    
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Validação básica
+            if (!name || !email || !phone || !message) {
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+            
+            // Formatar mensagem para WhatsApp
+            const whatsappMessage = `Olá! Meu nome é ${name}%0AE-mail: ${email}%0AWhatsApp: ${phone}%0A%0AMensagem:%0A${message}`;
+            
+            // Número do Thiago (sem formatação especial para URL)
+            const whatsappNumber = '554591497898';
+            
+            // Redirecionar para WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+            
+            // Limpar formulário
+            document.getElementById('contactForm').reset();
+        }
+    </script>
     
     <script src="script.js"></script>
 </body>
