@@ -106,10 +106,61 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body-md">
+    <!-- Logo Header -->
+    <div class="py-8 md:py-12 flex justify-center bg-gradient-to-b from-surface-container to-background">
+        <div class="max-w-container-max mx-auto px-gutter w-full flex justify-center">
+            <!-- Logo -->
+            <div class="relative">
+                <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full opacity-50 -z-10"></div>
+                <img alt="Thiago Sombrio Logo" class="h-32 md:h-48 w-auto object-contain drop-shadow-lg brightness-110" src="src/thiagosombriofotos/logosemfundo.png">
+            </div>
+        </div>
+    </div>
+    
     <!-- Top Navigation -->
     
+    <!-- Intro Video Section -->
+    <section class="py-12 md:py-section-gap bg-surface-container-lowest relative overflow-hidden" id="video">
+        <div class="absolute inset-0 z-0">
+            <img alt="Gym Background" class="w-full h-full object-cover opacity-40" src="src/fundoacademia.png">
+            <div class="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
+            <!-- Tech-style graphic elements -->
+            <div class="absolute top-1/3 left-1/4 w-32 md:w-48 h-32 md:h-48 border border-primary-container/20 rounded-full opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-48 md:w-64 h-48 md:h-64 border-t border-r border-primary-container/10 rounded-tr-full opacity-30"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(57,255,20,0.05)_0%,transparent_50%)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+            <div class="text-center mb-8 md:mb-12">
+                <span class="inline-block px-3 py-1 bg-primary-container/10 border border-primary-container/30 text-primary-container font-label-sm text-label-sm uppercase tracking-widest w-fit rounded-2xl mb-4">Por Que Você Treina Errado</span>
+                <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast mb-3 md:mb-4 uppercase leading-tight">Descubra os <span class="text-primary-container text-glow">Erros</span> que o Prendem</h2>
+                <div class="w-12 md:w-16 h-1 bg-primary-container mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card aspect-video relative group overflow-hidden cursor-pointer mb-6 md:mb-8">
+                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                        <div class="w-16 md:w-24 h-16 md:h-24 bg-primary-container rounded-full flex items-center justify-center intensity-glow group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-on-primary text-4xl md:text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+                    <div class="p-6 md:p-8 h-full flex flex-col justify-end relative z-10">
+                        <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg italic text-white/90">"A maioria esmagadora das pessoas se frustra na academia porque está, literalmente, dando um tiro no escuro esperando acertar o alvo."</p>
+                    </div>
+                </div>
+                <div class="text-center text-text-dim">
+                    <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg max-w-3xl mx-auto">
+                        Em quase 10 anos de consultoria online e após treinar mais de 5.000 pessoas, analisei uma quantidade incalculável de protocolos. Todos os alunos que chegaram até mim tinham uma coisa em comum: <span class="text-primary-container font-bold">todos treinavam errado</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center pt-12 md:pt-0 overflow-hidden">
+    <section class="py-12 md:py-section-gap bg-surface-container-lowest" id="hero">
         <div class="absolute inset-0 z-0">
             <img alt="Gym Background" class="w-full h-full object-cover opacity-40" src="src/fundoacademia.png">
             <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
@@ -145,32 +196,6 @@
                 </div>
             </div>
             </div>
-    </header>
-    
-    <!-- Intro Video Section -->
-    <section class="py-12 md:py-section-gap bg-surface-container-lowest" id="video">
-        <div class="max-w-container-max mx-auto px-gutter text-center mb-10 md:mb-16">
-            <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-high-contrast mb-4 md:mb-6 uppercase">Por que você treina errado?</h2>
-            <div class="w-16 md:w-24 h-1 bg-primary-container mx-auto"></div>
-        </div>
-        <div class="max-w-4xl mx-auto px-gutter">
-            <div class="glass-card aspect-video relative group overflow-hidden cursor-pointer">
-                <div class="absolute inset-0 flex items-center justify-center z-10">
-                    <div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center intensity-glow group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                </div>
-                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors"></div>
-                <div class="p-8 h-full flex flex-col justify-end relative z-10">
-                    <p class="font-body-lg text-body-lg italic text-white/80">"A maioria esmagadora das pessoas se frustra na academia porque está, literalmente, dando um tiro no escuro esperando acertar o alvo."</p>
-                </div>
-            </div>
-            <div class="mt-12 text-center text-text-dim max-w-2xl mx-auto">
-                <p class="font-body-lg text-body-lg">
-                    Em quase 10 anos de consultoria online e após treinar mais de 5.000 pessoas, analisei uma quantidade incalculável de protocolos. Todos os alunos que chegaram até mim tinham uma coisa em comum: todos treinavam errado.
-                </p>
-            </div>
-        </div>
     </section>
     
     <!-- Methodology Bento Grid -->
@@ -372,16 +397,25 @@
                     <div class="space-y-6">
                         <h3 class="font-headline-md text-headline-md text-high-contrast uppercase">Canais Diretos</h3>
                         <div class="flex flex-col gap-6">
-                            <a href="#" class="flex items-center gap-4 group">
+                            <a href="mailto:Thiagosombrio.f@gmail.com" class="flex items-center gap-4 group">
                                 <div class="w-12 h-12 rounded-full border border-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/10 transition-all">
                                     <span class="material-symbols-outlined text-primary-container">mail</span>
                                 </div>
                                 <div>
                                     <div class="text-white font-bold uppercase text-sm">E-mail</div>
-                                    <div class="text-text-dim">contato@thiagosombrio.com.br</div>
+                                    <div class="text-text-dim">Thiagosombrio.f@gmail.com</div>
                                 </div>
                             </a>
-                            <a href="#" class="flex items-center gap-4 group">
+                            <a href="https://wa.me/5545991497898" class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 rounded-full border border-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/10 transition-all">
+                                    <span class="material-symbols-outlined text-primary-container">phone</span>
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold uppercase text-sm">WhatsApp</div>
+                                    <div class="text-text-dim">(45) 9 9149-7898</div>
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/sombrio.personal" target="_blank" class="flex items-center gap-4 group">
                                 <div class="w-12 h-12 rounded-full border border-primary-container/20 flex items-center justify-center group-hover:bg-primary-container/10 transition-all">
                                     <span class="material-symbols-outlined text-primary-container">share</span>
                                 </div>
@@ -396,7 +430,7 @@
                     <div class="p-8 border border-primary-container/20 bg-primary-container/5">
                         <h4 class="font-headline-md text-headline-md text-high-contrast uppercase mb-4">Atendimento Imediato</h4>
                         <p class="text-text-dim mb-8">Prefere falar agora? Clique no botão abaixo para iniciar uma conversa no WhatsApp.</p>
-                        <a href="#" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold uppercase hover:scale-105 transition-transform rounded-2xl">
+                        <a href="https://wa.me/5545991497898" target="_blank" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 font-bold uppercase hover:scale-105 transition-transform rounded-2xl">
                             <span class="material-symbols-outlined">chat</span>
                             Chamar no WhatsApp
                         </a>
@@ -414,16 +448,21 @@
                 <p class="text-text-dim font-label-sm text-label-sm uppercase">© 2024 Thiago Sombrio Personal Trainer. Todos os direitos reservados.</p>
             </div>
             <div class="flex flex-wrap gap-6 md:gap-8 justify-center">
-                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Consultoria</a>
-                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Metodologia</a>
-                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Resultados</a>
-                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#">Instagram</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#metodologia">Consultoria</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#metodologia">Metodologia</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="#resultados">Resultados</a>
+                <a class="text-text-dim hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase" href="https://instagram.com/sombrio.personal" target="_blank">Instagram</a>
             </div>
-            <div class="flex gap-4 items-center justify-center md:justify-start">
-                <span class="text-text-dim font-body-md">@sombrio.personal</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
-                    <span class="material-symbols-outlined text-sm">open_in_new</span>
-                </div>
+            <div class="flex gap-3 items-center justify-center md:justify-start">
+                <a href="mailto:Thiagosombrio.f@gmail.com" title="Email" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">mail</span>
+                </a>
+                <a href="https://wa.me/5545991497898" target="_blank" title="WhatsApp" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">chat</span>
+                </a>
+                <a href="https://instagram.com/sombrio.personal" target="_blank" title="Instagram" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary-container/10 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">share</span>
+                </a>
             </div>
         </div>
     </footer>
