@@ -2,10 +2,11 @@
     --electric-green: #39ff14;
 }
 
-body {
+html, body {
     background-color: rgba(255, 255, 255, 0.05);
     color: #e5e2e1;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .glass-card {
