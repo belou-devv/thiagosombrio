@@ -145,6 +145,74 @@
         </div>
     </section>
     
+    <!-- Marquee Transition Section -->
+    <div id="marquee-transition" class="relative py-6 md:py-8 bg-surface-container-lowest overflow-hidden z-20 pointer-events-none select-none">
+        <!-- Top and Bottom Fade Overlays for smooth division transition -->
+        <div class="absolute top-0 left-0 right-0 h-8 md:h-12 bg-gradient-to-b from-surface-container-lowest to-transparent pointer-events-none z-30"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-8 md:h-12 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none z-30"></div>
+        
+        <!-- Left and Right Fade Overlays for premium edge fading -->
+        <div class="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-surface-container-lowest to-transparent pointer-events-none z-30"></div>
+        <div class="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-surface-container-lowest to-transparent pointer-events-none z-30"></div>
+
+        <!-- Glowing background accent behind the tracks -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.03)_0%,transparent_75%)] pointer-events-none"></div>
+        
+        <div class="relative flex flex-col gap-3 md:gap-4 -rotate-2 scale-102 my-1">
+            <!-- Track 1: Background (Reverse, blurred) -->
+            <div class="marquee-track flex overflow-hidden whitespace-nowrap opacity-25 filter blur-[1.5px]">
+                <div class="flex whitespace-nowrap animate-marquee-left w-max">
+                    <div class="flex items-center gap-8 pr-8 text-2xl md:text-4xl font-extrabold italic uppercase text-white font-headline-lg tracking-wider">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span class="text-primary-container">PERSONAL TRAINER</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span class="text-primary-container">CONSULTORIA ONLINE</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                    </div>
+                    <div class="flex items-center gap-8 pr-8 text-2xl md:text-4xl font-extrabold italic uppercase text-white font-headline-lg tracking-wider">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span class="text-primary-container">PERSONAL TRAINER</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                        <span class="text-primary-container">CONSULTORIA ONLINE</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-5 md:h-7 object-contain opacity-70 filter brightness-110 contrast-125" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Track 2: Foreground (Sharp, standard direction) -->
+            <div class="marquee-track flex overflow-hidden whitespace-nowrap">
+                <div class="flex whitespace-nowrap animate-marquee-left w-max">
+                    <div class="flex items-center gap-8 pr-8 text-3xl md:text-5xl font-black italic uppercase text-white font-headline-lg tracking-wider">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span class="text-primary-container text-glow">PERSONAL TRAINER</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span class="text-primary-container text-glow">CONSULTORIA ONLINE</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                    </div>
+                    <div class="flex items-center gap-8 pr-8 text-3xl md:text-5xl font-black italic uppercase text-white font-headline-lg tracking-wider">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span class="text-primary-container text-glow">PERSONAL TRAINER</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span>THIAGO SOMBRIO</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                        <span class="text-primary-container text-glow">CONSULTORIA ONLINE</span>
+                        <img src="src/thiagosombriofotos/logosemfundo.png" class="h-6 md:h-10 object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]" alt="Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Hero Section -->
     <section class="py-8 md:py-12 bg-surface-container-lowest relative" id="hero">
         <div class="absolute inset-0 z-0">

@@ -132,3 +132,56 @@ a {
         order: 1;
     }
 }
+
+/* --- Premium Marquee Section Styles --- */
+.marquee-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.animate-marquee-left {
+    display: flex;
+    flex-shrink: 0;
+    animation: marquee-left 25s linear infinite;
+}
+
+.animate-marquee-right {
+    display: flex;
+    flex-shrink: 0;
+    animation: marquee-right 25s linear infinite;
+}
+
+.animate-marquee-left *,
+.animate-marquee-right * {
+    flex-shrink: 0;
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Pause animation on hover for interactive feel (optional, but premium) */
+#marquee-transition:hover .animate-marquee-left,
+#marquee-transition:hover .animate-marquee-right {
+    animation-play-state: paused;
+}
+
+.marquee-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
