@@ -64,11 +64,47 @@ body {
     h1, h2, h3 {
         word-spacing: -0.05em;
     }
+
+    #metodologia .glass-card {
+        padding: 1.25rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #metodologia .grid {
+        gap: 1.25rem;
+    }
+
+    #metodologia .glass-card .material-symbols-outlined {
+        font-size: 2rem;
+    }
+
+    #metodologia .glass-card h3 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    #metodologia .glass-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 }
 
 @media (min-width: 769px) {
     .section-gap {
         margin-bottom: 120px;
+    }
+}
+
+section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+@media (min-width: 769px) {
+    section {
+        padding-top: 7.5rem !important;
+        padding-bottom: 7.5rem !important;
     }
 }
 
