@@ -383,12 +383,13 @@
                 <div class="flex items-center justify-center gap-6">
                     <button id="feedback-prev" aria-label="Vídeo anterior" class="w-10 h-10 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined">chevron_left</span></button>
 
-                    <div class="relative group">
-                        <div class="overflow-hidden glass-card max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[560px]">
-                            <video id="feedback-video" controls class="w-full h-auto transition-all duration-700 transform hover:scale-105">
-                                <source src="src/video experiencia.mp4" type="video/mp4">
+                    <div class="relative group flex justify-center w-full">
+                        <div class="overflow-hidden glass-card w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[560px] aspect-[9/16] max-h-[70vh] flex items-center justify-center bg-black/40">
+                            <video id="feedback-video" controls class="w-full h-full object-contain transition-opacity duration-300 opacity-100">
+                                <source id="feedback-video-source" src="src/video experiencia.mp4" type="video/mp4">
                                 Seu navegador não suporta este vídeo.
                             </video>
+                            <img id="feedback-image" src="" alt="Feedback" class="hidden w-full h-full object-contain transition-opacity duration-300 opacity-0">
                         </div>
                     </div>
 

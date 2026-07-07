@@ -60,3 +60,87 @@ document.addEventListener('DOMContentLoaded', () => {
     // também atualiza no carregamento inicial
     updateOverlay();
 });
+
+// Carrossel de Mídias de Feedback (Depoimentos)
+document.addEventListener('DOMContentLoaded', () => {
+    const feedbackVideo = document.getElementById('feedback-video');
+    const feedbackImage = document.getElementById('feedback-image');
+    const prevBtn = document.getElementById('feedback-prev');
+    const nextBtn = document.getElementById('feedback-next');
+
+    if (!feedbackVideo || !feedbackImage || !prevBtn || !nextBtn) return;
+
+    // Lista de mídias para alternar
+    const mediaList = [
+        { path: 'src/video experiencia.mp4', type: 'video' },
+        { path: 'src/video experiencia 2.MOV', type: 'video' },
+        { path: 'src/video experiencia 3.mp4', type: 'video' },
+        { path: 'src/foto experiencia 1.jpg', type: 'image' }
+    ];
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    function updateFeedbackMedia(newIndex) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        const currentMedia = mediaList[currentIndex];
+        const nextMedia = mediaList[newIndex];
+
+        // Determinar elementos atuais e novos
+        const currentEl = currentMedia.type === 'video' ? feedbackVideo : feedbackImage;
+        const nextEl = nextMedia.type === 'video' ? feedbackVideo : feedbackImage;
+
+        // Iniciar esmaecimento de saída (fade-out) da mídia atual
+        currentEl.classList.remove('opacity-100');
+        currentEl.classList.add('opacity-0');
+
+        // Se a mídia atual for vídeo, pausar a reprodução
+        if (currentMedia.type === 'video') {
+            feedbackVideo.pause();
+        }
+
+        // Aguardar o término do fade-out (300ms conforme classe duration-300 no HTML)
+        setTimeout(() => {
+            // Ocultar elemento antigo e exibir o novo
+            currentEl.classList.add('hidden');
+            nextEl.classList.remove('hidden');
+
+            // Carregar a nova mídia
+            if (nextMedia.type === 'video') {
+                feedbackVideo.src = nextMedia.path;
+                feedbackVideo.load();
+            } else {
+                feedbackImage.src = nextMedia.path;
+            }
+
+            // Pequeno delay para garantir que o browser registrou a mudança de display antes de esmaecer
+            setTimeout(() => {
+                nextEl.classList.remove('opacity-0');
+                nextEl.classList.add('opacity-100');
+                currentIndex = newIndex;
+                isTransitioning = false;
+            }, 50);
+
+        }, 300);
+    }
+
+    // Eventos de clique nas setas de navegação
+    prevBtn.addEventListener('click', () => {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) {
+            newIndex = mediaList.length - 1;
+        }
+        updateFeedbackMedia(newIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= mediaList.length) {
+            newIndex = 0;
+        }
+        updateFeedbackMedia(newIndex);
+    });
+});
+
