@@ -149,14 +149,18 @@
 
             <div class="max-w-4xl mx-auto">
                 <div class="glass-card aspect-video relative group overflow-hidden cursor-pointer mb-4 md:mb-6">
-                    <div class="absolute inset-0 flex items-center justify-center z-10">
-                        <div
-                            class="w-16 md:w-24 h-16 md:h-24 bg-primary-container rounded-full flex items-center justify-center intensity-glow group-hover:scale-110 transition-transform">
+                    <video id="main-video" controls class="w-full h-full object-cover relative z-0">
+                        <source src="src/video principal.mp4" type="video/mp4">
+                        Seu navegador não suporta este vídeo.
+                    </video>
+                    <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                        <div id="main-play-btn"
+                            class="w-16 md:w-24 h-16 md:h-24 bg-primary-container rounded-full flex items-center justify-center intensity-glow opacity-90 transition-opacity duration-300">
                             <span class="material-symbols-outlined text-on-primary text-4xl md:text-5xl"
                                 style="font-variation-settings: 'FILL' 1;">play_arrow</span>
                         </div>
                     </div>
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors pointer-events-none"></div>
                 </div>
                 <!-- <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg italic text-white/90 text-center">"A maioria esmagadora das pessoas se frustra na academia porque está, literalmente, dando um tiro no escuro esperando acertar o alvo."</p> -->
             </div>
@@ -376,16 +380,19 @@
                 </button>-->
 
                 <!-- Grid of feedbacks -->
-                <div class="grid grid-cols-1 md: justify-center">
-                    <div class="relative group max-w-[360px] mx-auto w-full">
-                        <div class="overflow-hidden glass-card">
-                            <video controls class="w-full h-auto transition-all duration-700 transform hover:scale-105">
+                <div class="flex items-center justify-center gap-6">
+                    <button id="feedback-prev" aria-label="Vídeo anterior" class="w-10 h-10 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined">chevron_left</span></button>
+
+                    <div class="relative group">
+                        <div class="overflow-hidden glass-card max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[560px]">
+                            <video id="feedback-video" controls class="w-full h-auto transition-all duration-700 transform hover:scale-105">
                                 <source src="src/video experiencia.mp4" type="video/mp4">
                                 Seu navegador não suporta este vídeo.
                             </video>
                         </div>
                     </div>
 
+                    <button id="feedback-next" aria-label="Próximo vídeo" class="w-10 h-10 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined">chevron_right</span></button>
                 </div>
 
                 <!-- Right Button 
