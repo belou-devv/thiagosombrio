@@ -155,7 +155,7 @@
                     </video>
                     <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                         <div id="main-play-btn"
-                            class="w-16 md:w-24 h-16 md:h-24 bg-primary-container rounded-full flex items-center justify-center intensity-glow opacity-90 transition-opacity duration-300">
+                            class="hidden md:flex w-16 md:w-24 h-16 md:h-24 bg-primary-container rounded-full items-center justify-center intensity-glow opacity-90 transition-opacity duration-300">
                             <span class="material-symbols-outlined text-on-primary text-4xl md:text-5xl"
                                 style="font-variation-settings: 'FILL' 1;">play_arrow</span>
                         </div>
@@ -381,10 +381,10 @@
 
                 <!-- Grid of feedbacks -->
                 <div class="flex items-center justify-center gap-6">
-                    <button id="feedback-prev" aria-label="Vídeo anterior" class="w-10 h-10 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined">chevron_left</span></button>
+                    <button id="feedback-prev" aria-label="Vídeo anterior" class="w-12 h-12 md:w-14 md:h-14 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined text-lg md:text-xl">chevron_left</span></button>
 
                     <div class="relative group flex justify-center w-full">
-                        <div class="overflow-hidden glass-card w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[560px] aspect-[9/16] max-h-[70vh] flex items-center justify-center bg-black/40">
+                        <div class="overflow-hidden glass-card w-full max-w-[420px] sm:max-w-[480px] md:max-w-[520px] lg:max-w-[560px] aspect-[9/16] max-h-[70vh] flex items-center justify-center bg-black/40">
                             <video id="feedback-video" controls class="w-full h-full object-contain transition-opacity duration-300 opacity-100">
                                 <source id="feedback-video-source" src="src/video experiencia.mp4" type="video/mp4">
                                 Seu navegador não suporta este vídeo.
@@ -393,7 +393,7 @@
                         </div>
                     </div>
 
-                    <button id="feedback-next" aria-label="Próximo vídeo" class="w-10 h-10 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined">chevron_right</span></button>
+                    <button id="feedback-next" aria-label="Próximo vídeo" class="w-12 h-12 md:w-14 md:h-14 rounded-full border border-primary-container text-primary-container flex items-center justify-center bg-background/80 backdrop-blur hover:bg-primary-container hover:text-on-primary transition-all duration-300"> <span class="material-symbols-outlined text-lg md:text-xl">chevron_right</span></button>
                 </div>
 
                 <!-- Right Button 
@@ -403,7 +403,7 @@
                 </button>-->
             </div>
             <div class="mt-12 md:mt-20 text-center flex flex-col md:flex-row gap-4 justify-center">
-                <a class="bg-primary-container text-on-primary px-8 md:px-12 py-4 md:py-5 font-headline-md text-headline-md font-bold uppercase rounded-2xl intensity-glow hover:scale-105 active:scale-95 hover:brightness-110 transition-all duration-300 inline-block"
+                <a class="bg-primary-container text-on-primary px-4 md:px-12 py-3 md:py-5 font-headline-md text-sm md:text-headline-md font-bold uppercase rounded-2xl intensity-glow hover:scale-105 active:scale-95 hover:brightness-110 transition-all duration-300 inline-block"
                     href="#consultoria">Quero ter esse resultado</a>
             </div>
         </div>
@@ -540,7 +540,7 @@
                     </div>
                     <ul class="flex-grow space-y-4 mb-8">
                         <li class="flex gap-3 text-sm"><span
-                                class="material-symbols-outlined text-primary-container text-sm">done</span> 3 mes de
+                                class="material-symbols-outlined text-primary-container text-sm">done</span> 3 meses de
                             acompanhamento</li>
                         <li class="flex gap-3 text-sm"><span
                                 class="material-symbols-outlined text-primary-container text-sm">done</span> 1 reunião
