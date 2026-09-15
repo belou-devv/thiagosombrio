@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lista de mídias para alternar
   const mediaList = [
     { path: "src/Video Experiencia.webm", type: "video" },
-    { path: "src/Video Experiencia 2.webm", type: "video" },
+    { path: "src/Video Experiencia 2.MOV", type: "video" },
     { path: "src/Video Experiencia 3.webm", type: "video" },
     { path: "src/foto experiencia 1.jpg", type: "image" },
   ];
