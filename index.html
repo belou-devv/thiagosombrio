@@ -113,6 +113,105 @@
 
 <body class="bg-background text-on-surface font-body-md">
 
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #0B0B0B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        cursor: default;
+        transition: opacity 0.7s ease, visibility 0.7s ease;
+    ">
+        <!-- Logo -->
+        <img src="src/thiagosombriofotos/logosemfundo.png" alt="Thiago Sombrio" style="
+            width: 80vmin;
+            max-width: 90vw;
+            object-fit: contain;
+            filter: drop-shadow(0 0 60px rgba(57,255,20,0.45));
+            animation: loader-pulse 1.8s ease-in-out infinite;
+        ">
+
+        <!-- Progress bar container -->
+        <div style="
+            width: 220px;
+            height: 3px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 99px;
+            overflow: hidden;
+        ">
+            <div id="loading-bar" style="
+                width: 0%;
+                height: 100%;
+                background: linear-gradient(90deg, #39ff14, #79ff5b);
+                border-radius: 99px;
+                box-shadow: 0 0 12px rgba(57,255,20,0.7);
+                transition: width 0.4s ease;
+            "></div>
+        </div>
+
+        <!-- Status label (shown while loading) -->
+        <p id="loading-label" style="
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin: 0;
+            transition: opacity 0.4s ease;
+        ">Carregando...</p>
+
+        <!-- Enter button (hidden until loaded) -->
+        <button id="enter-btn" onclick="enterSite()" style="
+            display: none;
+            opacity: 0;
+            margin-top: 8px;
+            padding: 14px 40px;
+            background: transparent;
+            border: 1.5px solid #39ff14;
+            color: #39ff14;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            border-radius: 99px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 0.5s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        " onmouseover="this.style.background='#39ff14';this.style.color='#0B0B0B';this.style.boxShadow='0 0 30px rgba(57,255,20,0.5)';" onmouseout="this.style.background='transparent';this.style.color='#39ff14';this.style.boxShadow='none';"
+        >Clique para entrar</button>
+
+        <style>
+            @keyframes loader-pulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.7; transform: scale(0.96); }
+            }
+            @keyframes btn-appear {
+                from { opacity: 0; transform: translateY(10px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes screen-ripple {
+                0%   { transform: scale(0); opacity: 0.15; }
+                100% { transform: scale(4); opacity: 0; }
+            }
+            #loading-screen.hidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+            #enter-btn.visible {
+                display: block !important;
+                animation: btn-appear 0.6s ease forwards;
+            }
+        </style>
+    </div>
+
     <!-- Top Navigation -->
 
     <!-- Intro Video Section -->
@@ -838,6 +937,62 @@
     </script>
 
     <script src="script.js"></script>
+
+    <script>
+        (function () {
+            var loadingScreen = document.getElementById('loading-screen');
+            var loadingBar    = document.getElementById('loading-bar');
+            var loadingLabel  = document.getElementById('loading-label');
+            var enterBtn      = document.getElementById('enter-btn');
+            var progress = 0;
+            var interval;
+
+            // Animate bar gradually up to ~85% while page loads
+            interval = setInterval(function () {
+                if (progress < 85) {
+                    progress += (85 - progress) * 0.07;
+                    loadingBar.style.width = progress.toFixed(1) + '%';
+                }
+            }, 80);
+
+            function finishLoading() {
+                clearInterval(interval);
+                // Complete the bar
+                loadingBar.style.width = '100%';
+
+                // After bar fills, swap label for enter button
+                setTimeout(function () {
+                    // Fade out label
+                    loadingLabel.style.opacity = '0';
+                    setTimeout(function () {
+                        loadingLabel.style.display = 'none';
+                        // Show enter button with animation
+                        enterBtn.classList.add('visible');
+                        // Make the whole screen clickable
+                        loadingScreen.style.cursor = 'pointer';
+                        loadingScreen.addEventListener('click', enterSite);
+                    }, 300);
+                }, 500);
+            }
+
+            if (document.readyState === 'complete') {
+                finishLoading();
+            } else {
+                window.addEventListener('load', finishLoading);
+            }
+        })();
+
+        function enterSite() {
+            var loadingScreen = document.getElementById('loading-screen');
+            if (!loadingScreen) return;
+            // Prevent double-firing
+            loadingScreen.removeEventListener('click', enterSite);
+            loadingScreen.classList.add('hidden');
+            setTimeout(function () {
+                loadingScreen.remove();
+            }, 750);
+        }
+    </script>
 </body>
 
 </html>
